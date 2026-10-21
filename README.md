@@ -10,7 +10,7 @@ realistic noise, and on IBM quantum hardware.
 
 | Milestone | Status |
 |---|---|
-| Classical Temperley–Lieb layer | ⬜ |
+| Classical Temperley–Lieb layer | ✅ |
 | Braid → unitary (path model) | ⬜ |
 | Exact Jones values (ground truth) | ⬜ |
 | Hadamard test circuit | ⬜ |
