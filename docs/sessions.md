@@ -2,10 +2,10 @@
 
 Owner key: **[you]** = hand-written, AI reviews only · **[delegable]** = agents may write.
 
-- [ ] **Session 0 — setup** [delegable]. `.\setup.ps1` runs clean, Bell counts print,
+- [ x] **Session 0 — setup** [delegable]. `.\setup.ps1` runs clean, Bell counts print,
       pytest passes (most tests skip). Create IBM Quantum account, save token with
       `QiskitRuntimeService.save_account(...)`. Push to GitHub.
-- [ ] **Session 1 — Temperley–Lieb layer** [you]. `tl.py`. Done when `tests/test_tl.py`
+- [ x] **Session 1 — Temperley–Lieb layer** [you]. `tl.py`. Done when `tests/test_tl.py`
       stops skipping and passes.
 - [ ] **Session 2 — braid → unitary** [you]. `braid.py`, path basis on A_{k-1}.
       Done when `tests/test_braid.py` passes (unitarity, braid relations).

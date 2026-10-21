@@ -40,3 +40,13 @@ def test_far_commutation(n):
 def test_identity_is_unit():
     one, e1 = call_or_skip(tl.identity, 3), call_or_skip(tl.e, 1, 3)
     assert call_or_skip(tl.compose, one, e1) == (0, e1)
+
+def test_long_loop():
+    a = tl.TLDiagram(4, (1, 0, 3, 2, 5, 4, 7, 6))   # e1 e3
+    b = tl.TLDiagram(4, (1, 0, 3, 2, 7, 6, 5, 4))   # e2 e1 e3, nested caps on top
+    assert call_or_skip(tl.compose, a, b) == (1, a)  # one loop through 4 middle points
+
+
+def test_multihop_strand():
+    e1, e2 = call_or_skip(tl.e, 1, 3), call_or_skip(tl.e, 2, 3)
+    assert call_or_skip(tl.compose, e1, e2) == (0, tl.TLDiagram(3, (5, 2, 1, 4, 3, 0)))
