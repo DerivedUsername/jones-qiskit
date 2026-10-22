@@ -59,7 +59,7 @@ def compose(a: TLDiagram, b: TLDiagram) -> tuple[int, TLDiagram]:
     c = [-1]*(2*n)
     l = 0
     visited = [-1]*n
-    """a helper function to find the top or bottom pair of a given bottom point and trace through middle visits"""
+    """ helper functions to find the top or bottom pair of a given bottom b or top a point and trace through middle visits"""
     """returns the visited list and the top or bottom pair of the given bottom point"""
     def trace_from_b(i: int, a: TLDiagram, b: TLDiagram) -> int:
         curr = i

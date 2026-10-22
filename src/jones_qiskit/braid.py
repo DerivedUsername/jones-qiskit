@@ -11,7 +11,21 @@ import numpy as np
 
 
 def path_basis(n: int, k: int) -> list[tuple[int, ...]]:
-    raise NotImplementedError("Session 2")
+    """All walks of length n on the Dynkin graph A_{k-1} starting at vertex 1."""
+    if n == 0:
+        return [(1,)]
+    
+    result = []
+    for i in range(len(path_basis(n-1, k))):
+        if path_basis(n-1, k)[i][-1] >= 2:
+            result.append(path_basis(n-1, k)[i] + (path_basis(n-1, k)[i][-1] - 1,))
+        if path_basis(n-1, k)[i][-1] <= k - 2:
+            result.append(path_basis(n-1, k)[i] + (path_basis(n-1, k)[i][-1] + 1,))
+    
+    return result
+
+
+   
 
 
 def generator_matrix(i: int, n: int, k: int, inverse: bool = False) -> np.ndarray:
