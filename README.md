@@ -45,6 +45,7 @@ src/jones_qiskit/
   pipeline.py       braid word in → Jones estimate out
   reference.py      known Jones polynomials for testing
 tests/              pytest suite (unimplemented stages skip, not fail)
+mathematica/        independent Mathematica cross-checks of the TL layer
 docs/sessions.md    session-by-session roadmap
 ```
 
